@@ -1,0 +1,17 @@
+<article class="post">
+  <div class="title">
+    <div class="col-12 mb-2 bg-dark text-light p-3">
+      <h3 class="portfolio-item-title text-light">{{title}}</h3>
+    </div>
+    <p>{{text_body}}</p>
+  </div>
+  <div class="meta">
+    Posted by
+    {{user.username}}
+    on
+    {{format_date created_at}}
+    |
+    <a href="/post/{{id}}">{{comments.length}}
+      {{format_plural "comment" comments.length}}</a>
+  </div>
+</article>

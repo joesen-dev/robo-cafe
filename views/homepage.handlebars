@@ -2,22 +2,7 @@
   {{#each posts as |post|}}
     <li>
       <div class="flex-row justify-space-between">
-        <article class="post">
-          <div class="title">
-            <div class="col-12 mb-2 bg-dark text-light p-3">
-              <h3 class="portfolio-item-title text-light">{{post.title}}</h3>
-              Posted by
-              {{post.user.username}}
-              on
-              {{post.created_at}}
-            </div>
-            <p>{{post.text_body}}</p>
-          </div>
-          <div class="meta">
-            |
-            <a href="/post/{{post.id}}">{{post.comments.length}} comment(s)</a>
-          </div>
-        </article>
+        {{> post-info post }}
       </div>
     </li>
   {{/each}}
