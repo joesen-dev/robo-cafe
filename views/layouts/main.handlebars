@@ -8,28 +8,32 @@
   </head>
 
   <body>
-    <div class="container flex-row justify-space-between align-center py-3">
-      <header>
+    <header>
+      <div class="container flex-row justify-space-between align-center py-3">
         <h1 class="page-title text-secondary bg-dark py-2 px-3">
           <a href="/">Robot Cafe</a>
         </h1>
         <nav>
-          <button id="logout" class="btn-no-style">logout</button>
-          <a href="/login">login</a>
+          {{#if loggedIn}}
+            <button id="logout" class="btn-no-style">logout</button>
+          {{else}}
+            <a href="/login">login</a>
+          {{/if}}
         </nav>
-      </header>
-      <main>
-        <section class="my-3">
-          {{{body}}}
-        </section>
+      </div>
+    </header>
+    <main class="container my-5">
+      <section class="my-3">
+        {{{body}}}
+      </section>
+    </main>
+    <footer>
+      Thanks for visiting!
+    </footer>
 
-      </main>
-      <footer>
-        Thanks for visiting!
-      </footer>
-    </div>
-
-    <script src="/javascript/logout.js"></script>
+    {{#if loggedIn}}
+      <script src="/javascript/logout.js"></script>
+    {{/if}}
   </body>
 
 </html>
