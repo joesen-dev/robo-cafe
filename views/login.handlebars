@@ -8,25 +8,36 @@
     <input type="password" id="password-login" />
   </div>
   <div>
-    <button type="submit">login</button>
+    <button type="submit">Login</button>
   </div>
 </form>
 
 <form class="signup-form">
   <div>
-    <label for="username-signup">username:</label>
-    <input type="text" id="username-signup" />
+    <button id="open">Sign up</button>
   </div>
-  <div>
-    <label for="email-signup">email:</label>
-    <input type="text" id="email-signup" />
-  </div>
-  <div>
-    <label for="password-signup">password:</label>
-    <input type="password" id="password-signup" />
-  </div>
-  <div>
-    <button type="submit">signup</button>
+  <div class="modal-container" id="modal_container">
+    <div class="modal">
+      <form class="signup-form">
+        <div>
+          <label for="username-signup">username:</label>
+          <input type="text" id="username-signup" />
+        </div>
+        <div>
+          <label for="email-signup">email:</label>
+          <input type="text" id="email-signup" />
+        </div>
+        <div>
+          <label for="password-signup">password:</label>
+          <input type="password" id="password-signup" />
+        </div>
+        <div>
+          <button type="submit" id="signup">Sign up</button>
+          <button id="close">Close</button>
+        </div>
+      </form>
+    </div>
   </div>
 </form>
+
 <script src="/javascript/login.js"></script>

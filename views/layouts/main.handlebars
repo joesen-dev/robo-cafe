@@ -4,7 +4,27 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Robot Cafe</title>
-    <link rel="stylesheet" href="/stylesheets/style.css" />
+    <!-- CSS  -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <link
+      href="/stylesheets/materialize.css"
+      type="text/css"
+      rel="stylesheet"
+      media="screen,projection"
+    />
+    <link
+      href="/stylesheets/style.css"
+      type="text/css"
+      rel="stylesheet"
+      media="screen,projection"
+    />
   </head>
 
   <body>
@@ -15,8 +35,8 @@
         </h1>
         <nav>
           <a href="/">Home</a>
+          <a href="/dashboard">dashboard</a>
           {{#if loggedIn}}
-            <a href="/dashboard">dashboard</a>
             <button id="logout" class="btn-no-style">logout</button>
           {{else}}
             <a href="/login">login</a>
@@ -29,13 +49,29 @@
         {{{body}}}
       </section>
     </main>
-    <footer>
-      Thanks for visiting!
+    <footer class="page-footer">
+      <div class="container">
+        <div class="row">
+          <div class="col l6 s12">
+            <h5 class="white-text">Thanks for visiting!</h5>
+          </div>
+
+        </div>
+      </div>
+      <div class="footer-copyright">
+        <div class="container">
+
+          <a class="grey-text text-lighten-4 right" href="#!"></a>
+        </div>
+      </div>
     </footer>
 
     {{#if loggedIn}}
       <script src="/javascript/logout.js"></script>
     {{/if}}
+    <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script src="/javascript/materializeJS/materialize.js"></script>
+    <script src="/javascript/materializeJS/init.js"></script>
   </body>
 
 </html>

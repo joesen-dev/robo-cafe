@@ -1,3 +1,7 @@
+const open = document.getElementById("open");
+const modal_container = document.getElementById("modal_container");
+const close = document.getElementById("close");
+
 async function loginFormHandler(event) {
   event.preventDefault();
 
@@ -41,12 +45,24 @@ async function signupFormHandler(event) {
     });
 
     if (response.ok) {
-      document.location.replace("/");
+      document.location.replace("/dashboard");
     } else {
       alert(response.statusText);
     }
   }
 }
+
+open.addEventListener("click", (event) => {
+  event.preventDefault();
+
+  modal_container.classList.add("show");
+});
+
+close.addEventListener("click", (event) => {
+  event.preventDefault();
+
+  modal_container.classList.remove("show");
+});
 
 document
   .querySelector(".login-form")

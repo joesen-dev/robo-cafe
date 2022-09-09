@@ -178,6 +178,37 @@ nav a:hover {
   width: 92%;
 }
 
+.modal-container {
+  background-color: rgba(0, 0, 0, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  /* hide modal */
+  opacity: 0;
+  pointer-events: none;
+  /* hide modal */
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vh;
+  transition: opacity 0.3s ease;
+}
+
+.modal-container.show {
+  pointer-events: auto;
+  opacity: 1;
+}
+
+.modal {
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  width: 600px;
+  max-width: 100%;
+  text-align: center;
+}
+
 /* DISPLAY */
 .display-none {
   display: none;
@@ -438,6 +469,7 @@ nav a:hover {
 .my-5 {
   margin-top: var(--spacing-five);
   margin-bottom: var(--spacing-five);
+  height: 100vh;
 }
 
 .my-auto {
