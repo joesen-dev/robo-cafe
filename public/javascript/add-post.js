@@ -1,6 +1,9 @@
 async function newPostHandler(event) {
   await event.preventDefault();
 
+  const newPostButton = document.querySelector(".add-post");
+  newPostButton.remove();
+
   console.log("CLICKED!");
   const postSection = document.querySelector(".post-section");
   const formEl = document.createElement("form");
@@ -18,6 +21,10 @@ async function newPostHandler(event) {
 
   formEl.className = "new-post-form";
 
+  // Div Classes
+  divEl1.className = "new-post-div1";
+  divEl2.className = "new-post-div2";
+
   // Title Classes
   titleLabelEl.setAttribute("for", "post-title");
   titleInputEl.setAttribute("type", "text");
@@ -27,7 +34,7 @@ async function newPostHandler(event) {
 
   // Body Classes
   bodyLabelEl.setAttribute("for", "post-url");
-  bodyInputEl.setAttribute("type", "text-body");
+  bodyInputEl.setAttribute("type", "text");
   bodyInputEl.setAttribute("name", "text-body");
   bodyLabelEl.innerText = "Text";
 

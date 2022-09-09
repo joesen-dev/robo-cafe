@@ -1,9 +1,9 @@
-<ol class="post-list">
-  {{#each posts as |post|}}
-    <li>
+<div class="section">
+  <div class="row">
+    {{#each posts as |post|}}
       <div class="flex-row justify-space-between">
         {{> post-info post }}
       </div>
-    </li>
-  {{/each}}
-</ol>
+    {{/each}}
+  </div>
+</div>

@@ -52,6 +52,12 @@ async function signupFormHandler(event) {
   }
 }
 
+// document.addEventListener("DOMContentLoaded", function () {
+//   var elem = document.querySelectorAll(".modal");
+//   var instance = M.Modal.getInstance(elem);
+//   instance.open();
+// });
+
 open.addEventListener("click", (event) => {
   event.preventDefault();
 

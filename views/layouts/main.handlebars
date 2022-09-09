@@ -29,23 +29,25 @@
 
   <body>
     <header>
-      <div class="container flex-row justify-space-between align-center py-3">
-        <h1 class="page-title text-secondary bg-dark py-2 px-3">
-          <a href="/">Robot Cafe</a>
-        </h1>
-        <nav>
-          <a href="/">Home</a>
-          <a href="/dashboard">dashboard</a>
-          {{#if loggedIn}}
-            <button id="logout" class="btn-no-style">logout</button>
-          {{else}}
-            <a href="/login">login</a>
-          {{/if}}
-        </nav>
-      </div>
+      <nav>
+        <div class="nav-wrapper">
+          <a href="/" class="brand-logo">Robot Cafe</a>
+          <ul id="nav-mobile" class="right hide-on-med-and-down">
+            <li><a href="/">Home</a></li>
+            <li><a href="/dashboard">dashboard</a></li>
+            {{#if loggedIn}}
+              <li>
+                <button id="logout" class="btn-no-style">logout</button>
+              </li>
+            {{else}}
+              <li><a href="/login">login</a></li>
+            {{/if}}
+          </ul>
+        </div>
+      </nav>
     </header>
     <main class="container my-5">
-      <section class="my-3">
+      <section class="content-wrap page-container">
         {{{body}}}
       </section>
     </main>
